@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Garage Lock Control</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+        .status { font-size: 2em; margin: 20px; }
+        .locked { color: blue; }
+        .unlocked { color: green; }
+        button { padding: 15px 30px; font-size: 1.2em; margin: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Garage Lock Control</h1>
+    <div class="status {{ state }}">
+        Status: {{ state.upper() }}
+    </div>
+    <form action="/lock" method="get">
+        <button type="submit">Lock</button>
+    </form>
+    <form action="/unlock" method="get">
+        <button type="submit">Unlock</button>
+    </form>
+</body>
+</html>
+
